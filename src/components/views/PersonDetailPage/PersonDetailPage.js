@@ -61,7 +61,7 @@ function PersonDetailPage(props) {
                     <Statistic title="Place of Birth" value={Detail.place_of_birth} valueStyle={{ fontSize: '1rem' }} />
                 </div>
                 <div className="biography">
-                    <h1>{Detail.name}</h1>
+                    <h1 className="primary-black-text">{Detail.name}</h1>
                     <p className="primary-black-text thin">{Detail.biography}</p>
                 </div>
                 <br />
