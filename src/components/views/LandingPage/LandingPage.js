@@ -68,16 +68,13 @@ function LandingPage() {
                     image={`${IMAGE_URL}original${Movies[0].backdrop_path && Movies[0].backdrop_path}`}
                     title={Movies[0].original_title}
                     text={Movies[0].overview}
+                    refreshFunction={fetchSearch}
                 />
             }
-
             {/*Body*/}
             <div style={{ width: '85%', margin: '1rem auto' }}>
-                {Searching ? <div><h1 className="large-black-heading" style={{ textAlign: 'center' }}>Begin Your Search Here</h1>
-                    {/*Search Feature*/}
-                    <SearchFeature
-                        refreshFunction={fetchSearch}
-                    />
+                {Searching ? 
+                <div>
                     <br />
                     <h2>Search Query</h2>
                     <hr />
@@ -104,12 +101,7 @@ function LandingPage() {
                     </div>
                 </div> :
                     <div>{/*Trending Popular Movies & NOT Searching*/}
-                        <h1 className="large-black-heading" style={{ textAlign: 'center' }}>Begin Your Search Here</h1>
-                        {/*Search Feature*/}
-                        <SearchFeature
-                            refreshFunction={fetchSearch}
-                        />
-                        <br />
+                        
                         <h2>Trending Movies</h2>
                         <hr />
                         <br />

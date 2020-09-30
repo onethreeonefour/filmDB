@@ -29,7 +29,7 @@ h2 {
 }
 
 hr {
-  border-top: 3px solid #D77A61;
+  border-top: 3px solid #00181a;
 }
 
 .bold {
@@ -47,6 +47,10 @@ body {
   line-height: 1.5;
   color: #24292e;
   background-color: #fff;
+}
+.splash{
+  background-image: url('./Image/background.jpg');
+  height:85vh;
 }
 
 .logo {
@@ -97,13 +101,7 @@ input.error {
   width: auto;
   
 } 
-.card{
-  transition: all .4s ease;
-}
 
-.card:hover {
-  transform: scale(1.015);
-}
 
 
 .custom-row img {
@@ -150,6 +148,26 @@ input.error {
   justify-content: center;
   align-self: center;
 }
+
+.heading-text{
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 40px #0ff;
+}
+
+.search-text{
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff;
+}
+
+
 
 @media only screen and (max-width: 985px) {
   .biography {

@@ -11,7 +11,7 @@ function SearchFeature(props) {
     }
 
     return (
-        <div style={{ display: 'flex', width: '80vw', margin: 'auto' }}>
+        <div style={{ display: 'flex', width: '60vw', margin: 'auto' }}>
             <Input
                 value={SearchTerms}
                 onChange={onChangeSearch}
@@ -23,14 +23,16 @@ function SearchFeature(props) {
                     }
                 }
                 }
-
+                style={{ backgroundColor: "transparent", color: "white", fontSize: "1rem", border: "0", borderBottom: "2px solid white" }}
             />
-            <Button onClick={() => {
+
+            <Button style={{ backgroundColor: "transparent", color: "white", border: "0", fontSize:"1.25rem" }} onClick={() => {
                 if (SearchTerms.length !== 0) {
                     props.refreshFunction(SearchTerms)
                 }
             }
             }>Search</Button>
+
         </div>
     )
 }

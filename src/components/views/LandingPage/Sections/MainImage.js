@@ -1,26 +1,21 @@
 import React from 'react'
 import { Typography } from 'antd';
+import SearchFeature from '../Sections/SearchFeature'
 
 const { Title } = Typography
 
 function MainImage(props) {
+    console.log(props)
     return (
-        <div style={{
-            background: `
-                linear-gradient(to bottom, rgba(0,0,0,0)
-                39%, rgba(0,0,0,0.15)
-                41%, rgba(0,0,0,0.95)
-                100%),
-                url('${props.image}'), #1c1c1c`,
-            height: '750px',
-            backgroundSize: '100%, cover',
-            backgroundPosition: 'center,center',
-            width: '100%',
-            position: 'relative'
-        }}>
-            <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '1.25rem' }}>
-                <Title style={{ color: 'white' }} level={1}>{props.title}</Title>
-                <p>{props.text}</p>
+        <div className="splash" style={{ display: 'flex' }}>
+            <div style={{ margin: "auto", justifyContent: "center", alignItems: "center" }} >
+                <div style={{ textAlign: 'center' }}>
+                    <h1 className="heading-text">FilmDB - Explore A Universe of Film</h1>
+                    <h2 className="search-text" >Being Your Search Here</h2>
+                    <SearchFeature
+                        refreshFunction={props.refreshFunction}
+                    />
+                </div>
             </div>
 
         </div>
