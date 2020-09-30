@@ -10,8 +10,9 @@ function MainImage(props) {
         <div className="splash" style={{ display: 'flex' }}>
             <div style={{ margin: "auto", justifyContent: "center", alignItems: "center" }} >
                 <div style={{ textAlign: 'center' }}>
-                    <h1 className="heading-text">FilmDB - Explore A Universe of Film</h1>
-                    <h2 className="search-text" >Begin Your Search Here</h2>
+                    <h1 className="heading-text">FilmDB</h1>
+                    <h2 className="search-text">Explore A Universe of Film</h2>
+        
                     <SearchFeature
                         refreshFunction={props.refreshFunction}
                     />
