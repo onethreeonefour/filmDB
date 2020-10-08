@@ -1,8 +1,5 @@
 import React from 'react'
-import { Typography } from 'antd';
 import SearchFeature from '../Sections/SearchFeature'
-
-const { Title } = Typography
 
 function MainImage(props) {
     console.log(props)
@@ -12,7 +9,6 @@ function MainImage(props) {
                 <div style={{ textAlign: 'center' }}>
                     <h1 className="heading-text">FilmDB</h1>
                     <h2 className="search-text">Explore A Universe of Film</h2>
-        
                     <SearchFeature
                         refreshFunction={props.refreshFunction}
                     />
