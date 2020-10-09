@@ -44,7 +44,8 @@ function CarouselDirected(props) {
                     backgroundColor: "#004A8F",
                     border: "1px solid #004A8F",
                     color: "white",
-                   
+                    margin:"auto",
+                    width:"250px"
                 }}
                 cover={Movie[index].poster_path ?
                     <img alt="profile" className="card-poster"  onError={handleAvatar} src={`${IMAGE_URL}w500${Movie[index].poster_path}`} />
