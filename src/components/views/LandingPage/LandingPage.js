@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from '../../Config'
 import MainImage from './Sections/MainImage';
 import GridCard from './Sections/GridCard';
-import SearchFeature from './Sections/SearchFeature'
 
 
 import { Row } from 'antd';

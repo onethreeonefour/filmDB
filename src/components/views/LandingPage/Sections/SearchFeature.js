@@ -23,7 +23,7 @@ function SearchFeature(props) {
                     }
                 }
                 }
-                style={{ backgroundColor: "transparent", color: "white", fontSize: "1rem", border: "0", borderBottom: "2px solid white" }}
+                style={{ backgroundColor: "transparent", color: "white", fontSize: "1.5rem", border: "0", borderBottom: "2px solid #71B48D" }}
             />
 
             <Button style={{ backgroundColor: "transparent", color: "white", border: "0", fontSize:"1.25rem" }} onClick={() => {
