@@ -6,7 +6,7 @@ import GridCard from './Sections/GridCard';
 import SearchFeature from './Sections/SearchFeature'
 
 
-import { Row, Button } from 'antd';
+import { Row } from 'antd';
 
 function LandingPage() {
     const [Movies, setMovies] = useState([]);
@@ -97,7 +97,7 @@ function LandingPage() {
                     {/*Load More Button*/}
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Button onClick={continueSearch} >Continue Search</Button>
+                        <button onClick={continueSearch} className="load-more-button">Continue Search</button>
                     </div>
                 </div> :
                     <div>{/*Trending Popular Movies & NOT Searching*/}
@@ -123,7 +123,7 @@ function LandingPage() {
                         {/*Load More Button*/}
                         <br />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button onClick={handleClick}>Load More</Button>
+                            <button onClick={handleClick} className="load-more-button">Load More</button>
                         </div>
                     </div>}
 

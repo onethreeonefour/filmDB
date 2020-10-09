@@ -186,6 +186,22 @@ input.error {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff;
 }
 
+.load-more-button{
+  background-color: #71b48d59;
+  padding:1rem;
+  border:2px solid  #71B48D;
+  color:white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .4s;
+  font-weight: bolder;
+}
+.load-more-button:hover{
+  border:2px solid  green;
+  background-color: green;
+}
+
 @media only screen and (max-width: 985px) {
   .biography {
     padding-top: 1rem;
