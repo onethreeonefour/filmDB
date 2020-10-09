@@ -61,7 +61,7 @@ function CarouselCast(props) {
             additionalTransfrom={0}
             arrows
             autoPlaySpeed={3000}
-            centerMode={true}
+            centerMode={false}
             className=""
             containerClass="container"
             dotListClass=""
