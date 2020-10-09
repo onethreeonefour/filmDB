@@ -202,6 +202,10 @@ input.error {
   background-color: green;
 }
 
+element.style{
+  margin: auto;
+}
+
 @media only screen and (max-width: 985px) {
   .biography {
     padding-top: 1rem;
