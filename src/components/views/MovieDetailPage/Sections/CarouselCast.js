@@ -36,23 +36,24 @@ function CarouselCast(props) {
 
 
     const renderCards = Image.map((cast, index) => {
-        return <a href={`/person/${UserID[index]}`} key={index}><Card
-            hoverable
-            key={index}
-            cover={props.detail[index].profile_path ?
-                <img alt="profile" src={`${IMAGE_URL}w500${Image[index]}`} className="card-poster" />
-                : <img alt="profile" src={NoPicture} className="card-poster"/>
-            }
-            style={{
-                borderRadius: "0.25rem",
-                boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
-                backgroundColor: "#004A8F",
-                border: "1px solid #004A8F",
-                         
-            }}
-        >
-            <Meta title={Character[index]} description={Actor[index]} />
-        </Card>
+        return <a href={`/person/${UserID[index]}`} key={index}>
+            <Card
+                hoverable
+                key={index}
+                cover={props.detail[index].profile_path ?
+                    <img alt="profile" src={`${IMAGE_URL}w500${Image[index]}`} className="card-poster" />
+                    : <img alt="profile" src={NoPicture} className="card-poster" />
+                }
+                style={{
+                    borderRadius: "0.25rem",
+                    boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
+                    backgroundColor: "#004A8F",
+                    border: "1px solid #004A8F",
+                    margin:"auto"
+                }}
+            >
+                <Meta title={Character[index]} description={Actor[index]} />
+            </Card>
         </a>
     })
 
@@ -61,7 +62,7 @@ function CarouselCast(props) {
             additionalTransfrom={0}
             arrows
             autoPlaySpeed={3000}
-            centerMode={false}
+            centerMode={true}
             className=""
             containerClass="container"
             dotListClass=""
