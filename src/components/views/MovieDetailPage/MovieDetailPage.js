@@ -58,7 +58,7 @@ function MovieDetailPage(props) {
                 <h2>Movie Info</h2>
                 {/*Movie Info Table - To Be Changed*/}
                 <div className="movie-info" >
-                    <Statistic title="Status" value={Movie.status} valueStyle={{ fontSize: '1rem' }} />
+                    <Statistic title="Status" value={Movie.status} valueStyle={{ fontSize: '1rem'}} />
                     <Statistic title="Budget" value={Movie.budget} valueStyle={{ fontSize: '1rem' }} />
                     <Statistic title="Revenue" value={Movie.revenue} valueStyle={{ fontSize: '1rem' }} />
                     <Statistic title="Vote Count" value={Movie.vote_count} valueStyle={{ fontSize: '1rem' }} />

@@ -53,7 +53,13 @@ function CarouselSimilar(props) {
             <Card
                 hoverable
                 key={index}
-                cover={<img alt="profile" className="card-poster" style={{ borderRadius: "1rem" }} src={`${IMAGE_URL}w500${Image[index]}`} onError={handleAvatar} />}
+                style={{
+                    borderRadius: "0.25rem",
+                    boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
+                    backgroundColor: "#004A8F",
+                    border: "1px solid #004A8F",              
+                }}
+                cover={<img alt="profile" className="card-poster" src={`${IMAGE_URL}w500${Image[index]}`} onError={handleAvatar} />}
             >
                 <Meta avatar=
                     {<div className="circular-score" style={{ width: "50px", textAlign: 'center' }}>

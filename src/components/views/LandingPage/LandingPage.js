@@ -102,7 +102,7 @@ function LandingPage() {
                 </div> :
                     <div>{/*Trending Popular Movies & NOT Searching*/}
                         
-                        <h2>Trending Movies</h2>
+                        <h2 className="primary-white-text">Trending Movies</h2>
                         <hr />
                         <br />
                         {/*Grid*/}

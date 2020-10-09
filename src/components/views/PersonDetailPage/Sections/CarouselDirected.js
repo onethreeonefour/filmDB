@@ -38,9 +38,17 @@ function CarouselDirected(props) {
             <Card
                 hoverable
                 key={index}
+                style={{
+                    borderRadius: "0.25rem",
+                    boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
+                    backgroundColor: "#004A8F",
+                    border: "1px solid #004A8F",
+                    color: "white",
+                   
+                }}
                 cover={Movie[index].poster_path ?
-                    <img alt="profile" className="card-poster" style={{ borderRadius: "1rem" }} onError={handleAvatar} src={`${IMAGE_URL}w500${Movie[index].poster_path}`} />
-                    : <img alt="profile" className="card-poster" style={{ borderRadius: "1rem" }} onError={handleAvatar} src={NoPicture} />}
+                    <img alt="profile" className="card-poster"  onError={handleAvatar} src={`${IMAGE_URL}w500${Movie[index].poster_path}`} />
+                    : <img alt="profile" className="card-poster" onError={handleAvatar} src={NoPicture} />}
             >
                 <Meta title={Movie[index].title} description={Movie[index].release_date ? (new Date(Movie[index].release_date).getFullYear()) : "TBD"} />
             </Card>

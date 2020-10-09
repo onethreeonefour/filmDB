@@ -34,7 +34,7 @@ function PersonDetailPage(props) {
                     setStarred(true)
                     setDirected(false)
                 }
-                
+
                 if (response.cast.length === 0 && response.crew.length > 0) {
                     response.crew.map(index => {
                         if (index.job === "Director") {
@@ -49,7 +49,7 @@ function PersonDetailPage(props) {
 
     return (
         <div>
-            <div className="main-detail" style={{ width: '85%', margin: '1rem auto' }}>
+            <div className="actor-detail-container" style={{ width: '85%', margin: '1rem auto' }}>
                 <div className="actor-detail">
                     {Detail.profile_path ? <img className="portrait" alt="portrait" src={`${IMAGE_URL}w342/${Detail.profile_path}`}></img> :
                         <img className="portrait" alt="portrait" src={NoPicture}></img>
@@ -70,11 +70,13 @@ function PersonDetailPage(props) {
             {Starred & Directed ?
                 <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
                     <div>
+                        <br />
                         <hr />
                         <h2 className="bold">Appears In</h2>
                         <CarouselApperances id={props.match.params.personId} />
                     </div>
                     <div>
+                        <br />
                         <hr />
                         <h2 className="bold">Directed</h2>
                         <CarouselDirected id={props.match.params.personId} />
@@ -82,10 +84,11 @@ function PersonDetailPage(props) {
                     {/*Carousel for person - If they've only directed films - else they've only acted in films*/}
                 </div> : Directed & Starred === false ?
                     <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
+                        <br />
                         <hr />
                         <h2 className="bold">Directed</h2>
                         <CarouselDirected id={props.match.params.personId} />
-                    </div>:                
+                    </div> :
                     <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
                         <hr />
                         <h2 className="bold">Appears In</h2>

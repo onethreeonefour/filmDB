@@ -5,6 +5,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app-body {
+  background-color: #00203D;
+  padding-bottom: 1rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -17,11 +22,11 @@ a, p {
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
+  color: white !important;
 }
 
 h1 {
   font-size: 3.5rem;
-  color: white;
 }
 
 h2 {
@@ -29,7 +34,8 @@ h2 {
 }
 
 hr {
-  border-top: 3px solid #00181a;
+  border: 0;
+  border-top: 3px solid #71B48D;
 }
 
 .bold {
@@ -45,12 +51,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
-  color: #24292e;
-  background-color: #fff;
 }
-.splash{
+
+.splash {
   background-image: url('./Image/background.jpg');
-  height:85vh;
+  height: 85vh;
 }
 
 .logo {
@@ -66,23 +71,32 @@ body {
   height: 100vh;
 }
 
-.button-style{
-  border:"2px solid gray";
+.button-style {
+  border: "2px solid gray";
   font-size: 1rem;
 }
 
 .large-black-heading {
   font-size: 3.5rem;
   text-shadow: 2px 1px rgb(255, 255, 255);
-  color: black;
 }
 
-.primary-white-text {
-  color: white;
+.primary-white-text, .ant-statistic-title, .ant-statistic-content, .ant-card-meta-title {
+  color: white !important;
+  font-family: 'Frank Ruhl Libre', serif !important;
 }
 
-.primary-black-text {
-  color: black;
+.ant-card-meta-title {
+  font-size: 1.5rem !important;
+}
+
+.ant-card-meta-description {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.ant-statistic-title {
+  font-size: 1.25rem !important;
+  font-weight: bold;
 }
 
 input.error {
@@ -99,10 +113,7 @@ input.error {
   object-fit: cover;
   height: 375px;
   width: auto;
-  
-} 
-
-
+}
 
 .custom-row img {
   width: 'auto';
@@ -115,6 +126,19 @@ input.error {
   margin: auto;
   border: '1px solid transparent';
   padding: 1.25rem;
+  background-color: #2e91ee34;
+}
+
+.actor-detail-container {
+  display: grid;
+  width: 95vw;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #004c943a;
+  border-radius: 1rem;
+  padding: 0rem 1rem 0rem 1rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.226);
 }
 
 .portrait {
@@ -149,25 +173,16 @@ input.error {
   align-self: center;
 }
 
-.heading-text{
+.heading-text {
   font-weight: bold;
   color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 40px #0ff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 40px #0ff;
 }
 
-.search-text{
+.search-text {
   color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff;
 }
-
-
 
 @media only screen and (max-width: 985px) {
   .biography {
@@ -183,7 +198,7 @@ input.error {
   .portrait {
     height: 375px;
   }
-  .main-detail {
+  .main-detail, .actor-detail-container {
     grid-template-columns: repeat(1, 1fr);
   }
   .movie-info {
@@ -195,5 +210,4 @@ input.error {
   .circular-score {
     display: none;
   }
- 
 }

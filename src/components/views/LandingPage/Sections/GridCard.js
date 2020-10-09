@@ -16,18 +16,22 @@ function GridCard(props) {
         <Col lg={6} md={8} xs={24} className="custom-row">
             <a href={`/movie/${props.movieId}`}>
                 <Card
-                   
-                    className="card"
+
                     hoverable
                     style={{
-                        borderRadius: "1rem",
-                        boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)"
+                        borderRadius: "0.25rem",
+                        boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
+                        backgroundColor: "#004A8F",
+                        border: "1px solid #004A8F",
+                        color: "white",
+                       
                     }}
-                    cover={props.image ? <img alt="movie" style={{ borderRadius: "1rem" }}
+                    cover={props.image ? <img alt="movie"
                         src={props.image} /> : <img src={NoPicture} alt="movie"></img>
                     }
                 >
                     <Meta
+                        className="card-meta primary-white-text"               
                         avatar=
                         {<div style={{ width: "75px", textAlign: 'center' }}>
                             <CircularProgressbar
@@ -55,6 +59,7 @@ function GridCard(props) {
                         </div>}
                         title={props.title}
                         description={props.date}
+
                     />
                 </Card>
             </a>
