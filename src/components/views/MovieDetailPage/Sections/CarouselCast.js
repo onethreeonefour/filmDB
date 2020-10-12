@@ -42,7 +42,7 @@ function CarouselCast(props) {
                 key={index}
                 cover={props.detail[index].profile_path ?
                     <img alt="profile" src={`${IMAGE_URL}w500${Image[index]}`} className="card-poster" />
-                    : <img alt="profile" src={NoPicture} className="no-image" />
+                    : <img alt="profile" src={NoPicture} className="card-poster" />
                 }
                 style={{
                     borderRadius: "0.25rem",

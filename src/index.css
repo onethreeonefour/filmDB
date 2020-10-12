@@ -112,15 +112,9 @@ input.error {
 .card-poster {
   object-fit: cover;
   height: 375px;
-  width: auto;
   margin: auto;
 }
 
-.no-image {
-  width: auto;
-  margin: auto;
-  height: 375px;
-}
 
 .custom-row img {
   width: 'auto';
