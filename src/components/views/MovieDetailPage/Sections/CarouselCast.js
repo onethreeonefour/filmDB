@@ -50,7 +50,7 @@ function CarouselCast(props) {
                     backgroundColor: "#004A8F",
                     border: "1px solid #004A8F",
                     margin:"auto",
-                    width:"250px"
+                    width:"auto"
                 }}
             >
                 <Meta title={Character[index]} description={Actor[index]} />
