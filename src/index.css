@@ -177,14 +177,15 @@ input.error {
 }
 
 .heading-text {
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 40px #0ff;
+  font-family: 'Monoton', cursive;
+  font-weight: 500;
+  font-size: 5rem;
+  text-shadow:2px 2px 2px hotpink, 2.5px 2.5px 1px aqua;
 }
 
 .search-text {
   color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff;
+  text-shadow:0 3px 5px black;
 }
 
 .load-more-button {
