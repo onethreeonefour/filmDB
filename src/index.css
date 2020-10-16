@@ -128,8 +128,8 @@ input.error {
 
 .actor-detail-container {
   display: grid;
-  width:85%;
-  margin:auto;
+  width: 85%;
+  margin: auto;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
@@ -212,11 +212,57 @@ input.error {
   margin-top: 1rem;
 }
 
-.display-grid{
-  display:grid;
+.display-grid {
+  display: grid;
 }
-.col-two{
-  grid-template-columns: repeat(2,1fr);
+
+.col-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.scroll-arrow a {
+  padding-top: 60px;
+}
+
+.scroll-arrow a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 2.2px solid #fff;
+  border-bottom: 2.2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 1.5s infinite ease-in-out;
+  animation: sdb04 1.5s infinite ease-in-out;
+  box-sizing: border-box;
+  bottom: 5%;
+  left:50%;
+  z-index: 500;
+}
+
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
 }
 
 @media only screen and (max-width: 3840px) {
@@ -234,8 +280,8 @@ input.error {
     padding-top: 2rem;
     margin: auto;
   }
-  .actor-detail-container{
-    width:65%;
+  .actor-detail-container {
+    width: 65%;
     margin-top: 2.5%;
   }
 }
@@ -252,17 +298,17 @@ input.error {
     padding-top: 2rem;
     margin: auto;
   }
-  .actor-detail-container{
-    width:85%;
+  .actor-detail-container {
+    width: 85%;
   }
 }
 
 @media only screen and (max-width: 985px) {
-  .col-two{
-    grid-template-columns: repeat(1,1fr);
+  .col-two {
+    grid-template-columns: repeat(1, 1fr);
   }
   .biography {
-    padding:1.25rem;
+    padding: 1.25rem;
   }
   .main-row {
     justify-content: center;

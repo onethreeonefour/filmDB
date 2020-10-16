@@ -13,7 +13,7 @@ function LandingPage() {
     const [Searching, setSearching] = useState(false);
     const [Query, setQuery] = useState("");
     const [CurrentSearchPage, setCurrentSearchPage] = useState(0)
-    
+
     useEffect(() => {
         const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
         fetchMovies(endpoint)
@@ -58,9 +58,9 @@ function LandingPage() {
         let searchQuery = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${Query}&page=${CurrentSearchPage + 1}&include_adult=false`
         fetchSearchedMovies(searchQuery);
     }
- 
+
     return (
-        <div style={{ width: "100%", margin: 0 }}>
+        <div>
             {/*Main Splash Image*/}
             {Movies[0] &&
                 <MainImage
@@ -72,35 +72,35 @@ function LandingPage() {
             }
             {/*Body*/}
             <div style={{ width: '85%', margin: '1rem auto' }}>
-                {Searching ? 
-                <div>
-                    <br />
-                    <h2>Search Query</h2>
-                    <hr />
-                    <br />
-                    {/*Grid*/}
-                    <Row gutter={[16, 16]}>
-                        {Movies && Movies.map((movie, index) => (
-                            <React.Fragment key={index}>
-                                <GridCard
-                                    image={movie.poster_path && `${IMAGE_URL}w780${movie.poster_path}`}
-                                    movieId={movie.id}
-                                    title={movie.title}
-                                    average={movie.vote_average}
-                                    date={movie.release_date}
-                                    genres={movie.genre_ids}
-                                />
-                            </React.Fragment>
-                        ))}
-                    </Row>
-                    {/*Load More Button*/}
-                    <br />
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <button onClick={continueSearch} className="load-more-button">Continue Search</button>
-                    </div>
-                </div> :
+                {Searching ?
+                    <div>
+                        <br />
+                        <h2>Search Query</h2>
+                        <hr />
+                        <br />
+                        {/*Grid*/}
+                        <Row gutter={[16, 16]}>
+                            {Movies && Movies.map((movie, index) => (
+                                <React.Fragment key={index}>
+                                    <GridCard
+                                        image={movie.poster_path && `${IMAGE_URL}w780${movie.poster_path}`}
+                                        movieId={movie.id}
+                                        title={movie.title}
+                                        average={movie.vote_average}
+                                        date={movie.release_date}
+                                        genres={movie.genre_ids}
+                                    />
+                                </React.Fragment>
+                            ))}
+                        </Row>
+                        {/*Load More Button*/}
+                        <br />
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <button onClick={continueSearch} className="load-more-button">Continue Search</button>
+                        </div>
+                    </div> :
                     <div>{/*Trending Popular Movies & NOT Searching*/}
-                        
+
                         <h2>Trending Movies</h2>
                         <hr />
                         <br />
