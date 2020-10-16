@@ -34,6 +34,25 @@ function CarouselCast(props) {
         }
     }, [props.detail])
 
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
 
     const renderCards = Image.map((cast, index) => {
         return <a href={`/person/${UserID[index]}`} key={index}>
@@ -49,8 +68,8 @@ function CarouselCast(props) {
                     boxShadow: "0 4px 6px 0 hsla(0,0%,0%,0.2)",
                     backgroundColor: "#004A8F",
                     border: "1px solid #004A8F",
-                    margin:"auto",
-                   width:"250px"
+                    margin: "0.25rem",
+                    minHeight: '450px'
                 }}
             >
                 <Meta title={Character[index]} description={Actor[index]} />
@@ -60,51 +79,8 @@ function CarouselCast(props) {
 
     return (
         <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlaySpeed={3000}
+            responsive={responsive}
             centerMode={true}
-            className=""
-            containerClass="container"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite={false}
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-                desktop: {
-                    breakpoint: {
-                        max: 3000,
-                        min: 1024
-                    },
-                    items: 5,
-                    partialVisibilityGutter: 40
-                },
-                mobile: {
-                    breakpoint: {
-                        max: 464,
-                        min: 0
-                    },
-                    items: 1,
-                    partialVisibilityGutter: 30
-                },
-                tablet: {
-                    breakpoint: {
-                        max: 1024,
-                        min: 464
-                    },
-                    items: 2,
-                    partialVisibilityGutter: 30
-                }
-            }}
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={2}
-            swipeable
         >
             {renderCards}
         </Carousel>

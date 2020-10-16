@@ -49,16 +49,17 @@ function PersonDetailPage(props) {
 
     return (
         <div>
-            <div className="actor-detail-container" style={{ width: '85%', margin: '1rem auto' }}>
-                <div className="actor-detail">
+            <div className="actor-detail-container">
+                <div className="actor-detail display-grid col-two">
                     {Detail.profile_path ? <img className="portrait" alt="portrait" src={`${IMAGE_URL}w342/${Detail.profile_path}`}></img> :
                         <img className="portrait" alt="portrait" src={NoPicture}></img>
                     }
-                    <h3>Personal Information</h3>
-                    <Statistic title="Known For" value={Detail.known_for_department} valueStyle={{ fontSize: '1rem' }} />
-                    <Statistic title="Gender" value={Detail.gender === 1 ? "Female" : "Male"} valueStyle={{ fontSize: '1rem' }} />
-                    <Statistic title="Birthday" value={Detail.birthday} valueStyle={{ fontSize: '1rem' }} />
-                    <Statistic title="Place of Birth" value={Detail.place_of_birth} valueStyle={{ fontSize: '1rem' }} />
+                    <div>
+                        <Statistic title="Known For" value={Detail.known_for_department} valueStyle={{ fontSize: '1rem' }} />
+                        <Statistic title="Gender" value={Detail.gender === 1 ? "Female" : "Male"} valueStyle={{ fontSize: '1rem' }} />
+                        <Statistic title="Birthday" value={Detail.birthday} valueStyle={{ fontSize: '1rem' }} />
+                        <Statistic title="Place of Birth" value={Detail.place_of_birth} valueStyle={{ fontSize: '1rem' }} />
+                    </div>
                 </div>
                 <div className="biography">
                     <h1 className="primary-black-text">{Detail.name}</h1>
@@ -68,30 +69,30 @@ function PersonDetailPage(props) {
             </div>
             {/*Carousel for person - If They have directed and starred in films*/}
             {Starred & Directed ?
-                <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
+                <div style={{ width: '80vw', diplay: 'flex', margin: 'auto', marginBottom: '3rem' }}>
                     <div>
                         <br />
-                        <hr />
-                        <h2 className="bold">Appears In</h2>
+                        <hr/>
+                        <h2 style={{ marginBottom: "2.5rem" }}>Appears In</h2>
                         <CarouselApperances id={props.match.params.personId} />
                     </div>
                     <div>
                         <br />
-                        <hr />
-                        <h2 className="bold">Directed</h2>
+                     
+                        <h2 style={{ marginBottom: "2.5rem" }}>Directed</h2>
                         <CarouselDirected id={props.match.params.personId} />
                     </div>
                     {/*Carousel for person - If they've only directed films - else they've only acted in films*/}
                 </div> : Directed & Starred === false ?
-                    <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
+                    <div style={{ width: '80vw', diplay: 'flex', margin: 'auto', marginBottom: '3rem' }}>
                         <br />
-                        <hr />
-                        <h2 className="bold">Directed</h2>
+                        <hr/>
+                        <h2 style={{ marginBottom: "2.5rem" }}>Directed</h2>
                         <CarouselDirected id={props.match.params.personId} />
                     </div> :
-                    <div style={{ width: '80vw', diplay: 'flex', margin: 'auto' }}>
-                        <hr />
-                        <h2 className="bold">Appears In</h2>
+                    <div style={{ width: '80vw', diplay: 'flex', margin: 'auto', marginBottom: '3rem' }}>
+                     
+                        <h2 style={{ marginBottom: "3rem" }}>Appears In</h2>
                         <CarouselApperances id={props.match.params.personId} />
                     </div>
 

@@ -16,7 +16,6 @@ function GridCard(props) {
         <Col lg={6} md={8} xs={24} className="custom-row">
             <a href={`/movie/${props.movieId}`}>
                 <Card
-
                     hoverable
                     style={{
                         borderRadius: "0.25rem",
@@ -31,7 +30,7 @@ function GridCard(props) {
                     }
                 >
                     <Meta
-                        className="card-meta primary-white-text"               
+                        className="card-meta"               
                         avatar=
                         {<div style={{ width: "75px", textAlign: 'center' }}>
                             <CircularProgressbar
@@ -46,7 +45,6 @@ function GridCard(props) {
                                     // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
                                     strokeLinecap: 'butt',
                                     // Text size
-
                                     textSize: '16px',
                                     // Colors.
                                     textColor: props.average * 100 / 10 > 65 ? "Chartreuse" : props.average * 100 / 10 > 50 ? "orange" : "red",

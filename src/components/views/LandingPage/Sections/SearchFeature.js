@@ -11,12 +11,12 @@ function SearchFeature(props) {
     }
 
     return (
-        <div style={{ display: 'flex', width: '60vw', margin: 'auto' }}>
+        <div className="search-function">
             <Input
                 value={SearchTerms}
                 onChange={onChangeSearch}
                 required={true}
-                placeholder="Search here.."
+
                 onPressEnter={() => {
                     if (SearchTerms.length !== 0) {
                         props.refreshFunction(SearchTerms)
@@ -25,12 +25,12 @@ function SearchFeature(props) {
                 }
                 style={{ backgroundColor: "transparent", color: "white", fontSize: "1.5rem", border: "0", borderBottom: "2px solid #71B48D" }}
             />
-
-            <Button style={{ backgroundColor: "transparent", color: "white", border: "0", fontSize:"1.25rem" }} onClick={() => {
+            <Button size='large' className="search-button" onClick={() => {
                 if (SearchTerms.length !== 0) {
                     props.refreshFunction(SearchTerms)
                 }
             }
+
             }>Search</Button>
 
         </div>
