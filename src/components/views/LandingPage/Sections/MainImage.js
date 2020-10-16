@@ -11,7 +11,7 @@ function MainImage(props) {
             <div class="twinkling"></div>
             <div style={{ margin: "auto", justifyContent: "center", alignItems: "center", zIndex: "5" }} >
                 <div style={{ textAlign: 'center' }}>
-                    <h1 className="heading-text">FilmDB</h1>
+                    <h1 className="heading-text">FILMDB</h1>
                     <h2 className="search-text">Explore A Universe of Film</h2>
                     <SearchFeature
                         refreshFunction={props.refreshFunction}
