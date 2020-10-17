@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from '../../Config'
 import MainImage from './Sections/MainImage';
 import GridCard from './Sections/GridCard';
@@ -13,6 +13,10 @@ function LandingPage() {
     const [Searching, setSearching] = useState(false);
     const [Query, setQuery] = useState("");
     const [CurrentSearchPage, setCurrentSearchPage] = useState(0)
+
+    const searchRef = useRef('')
+
+    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
     useEffect(() => {
         const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
@@ -36,6 +40,7 @@ function LandingPage() {
                 //console.log(response);
                 setMovies(response.results);
                 setCurrentPage(response.page)
+                scrollToRef(searchRef);
             })
     }
 
@@ -75,7 +80,7 @@ function LandingPage() {
                 {Searching ?
                     <div>
                         <br />
-                        <h2>Search Query</h2>
+                        <h2 ref={searchRef}>Search Query</h2>
                         <hr />
                         <br />
                         {/*Grid*/}

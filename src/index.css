@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -173,10 +178,16 @@ input.error {
 }
 
 .heading-text {
-  font-family: 'Monoton', cursive;
+  font-family: 'Roboto', sans-serif;
+  background: #111;
   font-weight: 500;
   letter-spacing: 0.5rem;
-  font-size: 5rem;
+  font-size: 6.5rem;
+}
+
+.db-txt {
+  font-weight: bold;
+  -webkit-text-stroke: 5px rgb(255, 255, 255);
 }
 
 .search-text {
@@ -238,7 +249,7 @@ input.error {
   animation: sdb04 1.5s infinite ease-in-out;
   box-sizing: border-box;
   bottom: 5%;
-  left:50%;
+  left: 50%;
   z-index: 500;
 }
 
